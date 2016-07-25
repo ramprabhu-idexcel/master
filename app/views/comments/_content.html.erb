@@ -1,0 +1,3 @@
+<%= comment.body %> == <%= comment.created_at.to_s(:long) %>
+<%= link_to 'Edit', edit_post_comment_path(comment, id: comment.id, post_id: comment.post.id) %>
+<%= link_to 'Destroy', post_comment_path(comment, id: comment.id, post_id: comment.post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
