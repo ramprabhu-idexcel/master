@@ -1,3 +1,13 @@
-<div class="event">
-  <%= event.created_at.to_formatted_s(:short) %>: <%= event.message %>
-</div>
+<li class=<%= index.odd? ? "left clearfix": "right clearfix"%>><span class=<%= index.odd? ? "chat-img pull-left": "chat-img pull-right"%>>
+                          <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                      </span>
+  <div class="chat-body clearfix">
+    <div class="header">
+      <strong class=<%= index.odd? ? "primary-font": "pull-right primary-font"%>><%= event.user.name %></strong>
+      <small class=<%= index.odd? ? "pull-right text-muted": " text-muted"%>><span class="glyphicon glyphicon-time"></span><%= created_at(event.created_at) %></small>
+    </div>
+    <p>
+      <%= event.message %>
+    </p>
+  </div>
+</li>

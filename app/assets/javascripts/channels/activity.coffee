@@ -7,6 +7,6 @@ App.activity = App.cable.subscriptions.create "ActivityChannel",
 
   received: (event) ->
     # Called when there's incoming data on the websocket for this channel
-    $('#events').prepend "<div class='event'>#{event.message}</div>"
+    $('.panel-body').find('ul').prepend "#{event.message}"
 
 
