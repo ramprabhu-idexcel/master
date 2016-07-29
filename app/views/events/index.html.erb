@@ -1,46 +1,52 @@
+<!-- http://bootdey.com/snippets/view/messages-chat-widget -->
 <div class="container">
-  <div class="row">
-    <div class="col-md-5">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <span class="glyphicon glyphicon-comment"></span> Chat
-          <div class="btn-group pull-right">
-            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-              <span class="glyphicon glyphicon-chevron-down"></span>
-            </button>
-            <ul class="dropdown-menu slidedown">
-              <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-refresh">
-                            </span>Refresh</a></li>
-              <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-ok-sign">
-                            </span>Available</a></li>
-              <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-remove">
-                            </span>Busy</a></li>
-              <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-time"></span>
-                Away</a></li>
+  <div class="col-md-12 col-lg-6">
+    <div class="panel">
+      <!--Heading-->
+      <div class="panel-heading">
+        <div class="panel-control">
+          <div class="btn-group">
+            <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#demo-chat-body"><i class="fa fa-chevron-down"></i></button>
+            <button type="button" class="btn btn-default" data-toggle="dropdown"><i class="fa fa-gear"></i></button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="#">Available</a></li>
+              <li><a href="#">Busy</a></li>
+              <li><a href="#">Away</a></li>
               <li class="divider"></li>
-              <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-off"></span>
-                Sign Out</a></li>
+              <li><a id="demo-connect-chat" href="#" class="disabled-link" data-target="#demo-chat-body">Connect</a></li>
+              <li><a id="demo-disconnect-chat" href="#" data-target="#demo-chat-body">Disconect</a></li>
             </ul>
           </div>
         </div>
-        <div class="panel-body">
-          <ul class="chat">
-            <% @events.each_with_index do |event, index|%>
-              <%= render 'event', { event: event, index: event.id } %>
-            <% end %>
-          </ul>
-        </div>
+        <h3 class="panel-title">Chat</h3>
+      </div>
+
+      <!--Widget body-->
+      <div id="demo-chat-body" class="collapse in">
+        <div class="nano has-scrollbar" style="height:380px">
+          <div class="nano-content pad-all" tabindex="0" style="right: -17px;">
+            <ul class="list-unstyled media-block">
+              <% @events.each_with_index do |event, index|%>
+                <%= render 'event', { event: event, index: event.id } %>
+              <% end %>
+            </ul>
+
+          </div>
+          <div class="nano-pane"><div class="nano-slider" style="height: 141px; transform: translate(0px, 0px);"></div></div></div>
+
+        <!--Widget footer-->
         <div class="panel-footer">
           <%= form_for(@message) do |f| %>
-            <div class="input-group">
-              <%= f.text_field :comment, id: "btn-input", class: "form-control input-sm", placeholder: "Type your message here..." %>
-                <span class="input-group-btn">
-                  <%= f.button "Send", class: "btn btn-warning btn-sm", id: "btn-chat" %>
-                </span>
+          <div class="row">
+            <div class="col-xs-9">
+              <%= f.text_field :comment, class: "form-control chat-input", placeholder: "Type your message here..." %>
             </div>
+            <div class="col-xs-3">
+              <%= f.button "Send", class: "btn btn-primary btn-block" %>
+            </div>
+          </div>
           <% end %>
         </div>
-
       </div>
     </div>
   </div>
