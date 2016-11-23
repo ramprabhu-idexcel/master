@@ -1,4 +1,5 @@
 class MoneyType < ActiveRecord::Type::Integer
+=begin
   def cast(value)
     if !value.kind_of?(Numeric) && value.include?('$')
       price_in_dollars = value.gsub(/\$/, '').to_f
@@ -7,4 +8,5 @@ class MoneyType < ActiveRecord::Type::Integer
       super
     end
   end
+=end
 end
