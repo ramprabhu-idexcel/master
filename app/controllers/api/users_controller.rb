@@ -1,6 +1,7 @@
 module Api
   class UsersController < ApplicationController
-    skip_before_filter :authenticate_user!, :configure_permitted_parameters
+    skip_before_action :authenticate_user!, :configure_permitted_parameters
+    skip_before_action :verify_authenticity_token
     before_action :set_user, only: [:show, :update, :destroy]
 
     # GET /users
@@ -54,8 +55,7 @@ module Api
     # Post /users/validate
     def authenticate
       @user = User.find_by(username: user_params["username"])
-                  .try(:authenticate, user_params["password"])
-      if @user
+      if @user.try(:valid_password?, user_params["password"])
         render json: { message: "Valid user", status: 200, token: @user.token }
       else
         render json: { message: "Invalid Login Credentials. Kindly check once...", status: 401 }
