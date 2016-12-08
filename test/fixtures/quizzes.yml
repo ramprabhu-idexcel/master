@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyText
+  answer: MyString
+  type: 
+  question_name: MyString
+  option: MyString
+
+two:
+  question: MyText
+  answer: MyString
+  type: 
+  question_name: MyString
+  option: MyString

@@ -1,10 +1,6 @@
 module Api
-  class UsersController < ApplicationController
-    skip_before_action :authenticate_user!, :configure_permitted_parameters
-    skip_before_action :verify_authenticity_token
+  class UsersController < CommonController
     before_action :set_user, only: [:show, :update, :destroy]
-    http_basic_authenticate_with name: "ram", password: "Passw00rd"
-
     # GET /users
     def index
       @users = User.all
@@ -82,8 +78,8 @@ module Api
                                      :password_confirmation)
       end
 
-     # collect user ids
-     def get_ids_from_params
+      # collect user ids
+      def get_ids_from_params
         params[:user_ids]
       end
   end
