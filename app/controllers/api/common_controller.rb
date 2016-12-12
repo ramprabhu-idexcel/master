@@ -14,5 +14,10 @@ module Api
       Ip.create!(ipaddress: ipaddress) rescue nil
       render json: { ipaddress_count: Ip.count }
     end
+
+    def ipaddress_lists
+      @ipaddress = Ip.all
+      render json: @ipaddress
+    end
   end
 end

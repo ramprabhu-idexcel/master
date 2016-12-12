@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       end
     end
     get 'hit-count', action: :remote_ip, controller: 'common'
+    get 'ipaddress/list', action: :ipaddress_lists, controller: 'common'
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
