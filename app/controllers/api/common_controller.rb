@@ -6,8 +6,7 @@ module Api
     require 'socket'
 
     def remote_ip
-      ip = Socket.ip_address_list.detect{ |intf| intf.ipv4_private? }
-      Ip.create!(ipaddress: ip.ip_address) rescue nil if ip
+      Ip.create!(ipaddress: client_ip) rescue nil
       render json: { ipaddress_count: Ip.count }
     end
 
@@ -17,7 +16,7 @@ module Api
     end
 
     private
-    def local_ip
+    def client_ip
       if request.remote_ip == '127.0.0.1'
         # Hard coded remote address
         ipaddress = '123.45.67.89'
