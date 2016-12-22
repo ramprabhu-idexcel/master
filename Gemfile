@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2'
 #only for heroku
@@ -49,6 +49,12 @@ gem "twitter-bootstrap-rails"
 # elastic search
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+
+# my gem path
+gem 'mygem', github: 'ramprabhu-idexcel/my-gem'
+
+# local gem path
+#gem 'mygem', path: '/home/igate/projects/angular2-rails5/mygem'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
