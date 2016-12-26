@@ -47,8 +47,8 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 
 # elastic search
-gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
+#gem 'elasticsearch-model'
+#gem 'elasticsearch-rails'
 
 # my gem path
 gem 'mygem', github: 'ramprabhu-idexcel/my-gem'
