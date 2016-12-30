@@ -53,7 +53,7 @@ module Api
     def authenticate
       @user = User.find_by(username: user_params["username"])
       if @user.try(:valid_password?, user_params["password"])
-        render json: { message: "Valid user", status: 200, token: @user.token }
+        render json: { message: "Valid user", status: 200, token: @user.token, user_id: @user.id }
       else
         render json: { message: "Invalid Login Credentials. Kindly check once...", status: 401 }
       end
