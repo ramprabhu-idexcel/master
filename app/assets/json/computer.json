@@ -1,0 +1,52 @@
+[
+  {
+    "question": "CSS Stands for",
+    "options": ["Computer Styled Sections","Cascading Style Sheets", "Crazy Solid Shapes", "None of the above"],
+    "answer" : "Cascading Style Sheets"
+  },
+  {
+    "question": "Internet Explorer 6 was released in",
+    "options": ["2001", "1998", "2006", "2003"],
+    "answer" : "2006"
+  },
+  {
+    "question": "Your favorite website is",
+    "options": ["CSS-Tricks", "MSS-Tricks", "LSS-Tricks", "PSS-Tricks"],
+    "answer": "CSS-Tricks"
+  },
+  {
+    "question": "What type of program do you use to type a letter?",
+    "options": ["Database", "Word Processor", "Spreadsheet", "Paint"],
+    "answer": "Word Processor"
+  },
+  {
+    "question": "What type of webpage is used to look up information?",
+    "options": ["Game", "Search Engine", "YouTube", "Online Store"],
+    "answer": "Search Engine"
+  },
+  {
+    "question": "SEO Stand for",
+    "options": ["Secret Enterprise Organizations", "Special Endowment Opportunity", "Search Engine Optimization", "Seals End Olives"],
+    "answer": "Search Engine Optimization"
+  },
+  {
+    "question": "A 404 Error",
+    "options": ["is an HTTP Status Code meaning Page Not Found", "is a good excuse for a clever design", "should be monitored for in web analytics", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "question": "What device is used to input text into the computer?",
+    "options": ["Printer", "Keyboard", "Mouse", "Flash Drive"],
+    "answer": "Keyboard"
+  },
+  {
+    "question": "What device displays the computer icons?",
+    "options":  ["Printer", "Floppy Disk", "Monitor", "Flash Drive"],
+    "answer": "Monitor"
+  },
+  {
+    "question": "What Microsoft program do you use to create a slide-show or presentation?",
+    "options": ["Excel", "PowerPoint", "Word", "Publisher"],
+    "answer": "PowerPoint"
+  }
+]

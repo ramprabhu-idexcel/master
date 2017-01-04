@@ -1,0 +1,55 @@
+[
+  {
+    "question": "Against which team did Rahul Dravid made his ODI debut?",
+    "options": ["Kenya", "Pakistan", "Sri Lanka", "Australia"],
+    "answer" : "Pakistan"
+  },
+  {
+    "question": "Which is the associated sport of Bombay Gold Cup?",
+    "options": ["Basketball", "Weightlifting", "Hockey", "Football"],
+    "answer" : "Hockey"
+  },
+  {
+    "question": "In which year of First World War Germany declared war on Russia and France?",
+    "options": ["1914", "1915", "1916", "1917"],
+    "answer": "1915"
+  },
+  {
+    "question": "Who among the following is not a recipient of 'Dada Saheb Phalke' Award?",
+    "options": ["Ramanand Sagar", "Raj Kapoor", "V. Shantaram", "Ashok Kumar"],
+    "answer": "Ramanand Sagar"
+  },
+  {
+    "question": "The Arjuna Awards were instituted in the year",
+    "options": ["1965", "1961", "1963", "1957"],
+    "answer": "1963"
+  },
+  {
+    "question": "The hydrological cycle is a conceptual model that describes",
+    "options": ["the storage of water between biosphere, hydrosphere, atmosphere and lithosphere",
+      "the movement of water between biosphere, atmosphere, lithosphere and hydrosphere",
+      "both (a) and (b)",
+      "None of the above"],
+    "answer": "the movement of water between biosphere, atmosphere, lithosphere and hydrosphere"
+  },
+  {
+    "question": "Gangubai hangal is the name associated with",
+    "options": ["Literature", "Music", "Journalism", "Environment"],
+    "answer": "Journalism"
+  },
+  {
+    "question": "Which of the following metals forms an amalgam with other metals?",
+    "options": ["Tin", "Mercury", "Lead", "Zinc"],
+    "answer": "Tin"
+  },
+  {
+    "question": "The NAM summit which demanded expansion of the United Nations Security council had met at",
+    "options":  ["Tehran", "Cairo", "Harare", "Jakarta"],
+    "answer": "Cairo"
+  },
+  {
+    "question": "What does AM mean?",
+    "options": ["Angelo marconi", "Anno median", "Amplitude modulation", "Amperes"],
+    "answer": "Amperes"
+  }
+]
