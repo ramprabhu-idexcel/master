@@ -24,10 +24,10 @@ namespace :master do
   task computer_quiz: :environment do
     puts "******** start *******"
     computer = Computer.new(question: "CSS Stands for", answer: "Cascading Style Sheets")
-    computer.options << "Computer Styled Sections"
-    computer.options << "Cascading Style Sheets"
-    computer.options << "Crazy Solid Shapes"
-    computer.options << "None of the above"
+    computer.options << "{Computer Styled Sections}"
+    computer.options << "{Cascading Style Sheets}"
+    computer.options << "{Crazy Solid Shapes}"
+    computer.options << "{None of the above}"
     computer.save!
     puts "<====== computer object ====>"
     puts computer.inspect
