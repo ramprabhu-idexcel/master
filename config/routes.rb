@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     end
     resources :quizzes do
       collection do
+        get 'computer'
         post 'validate'
       end
     end

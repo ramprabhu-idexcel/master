@@ -26,6 +26,15 @@ module Api
       render json: @score_json
     end
 
+    # GET api/quizzes/computer
+    def computer
+      @computer_arr = []
+      Computer.all.shuffle.each do |computer|
+        @computer_arr << { name: computer.question, answers: computer.options }
+      end
+      render json: @computer_arr
+    end
+
     private
 
     def set_type
