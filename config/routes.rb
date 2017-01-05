@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :quizzes
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
+
   resources :messages
   root to: 'events#index'
 

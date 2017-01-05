@@ -46,6 +46,11 @@
               <%= f.text_area :address, placeholder: "Address", class: "form-control" %>
             </div>
 
+            <div class="form-group">
+              <%= flash[:recaptcha_error] %>
+              <%= recaptcha_tags %>
+            </div>
+
               <div class="actions">
                 <%= f.submit "Sign up", class: "btn btn-success btn-lg btn-block" %>
               </div>
