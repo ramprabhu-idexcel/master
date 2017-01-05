@@ -51,10 +51,10 @@ gem "twitter-bootstrap-rails"
 #gem 'elasticsearch-rails'
 
 # my gem path
-#gem 'mygem', github: 'ramprabhu-idexcel/my-gem'
+gem 'mygem', github: 'ramprabhu-idexcel/my-gem'
 
 # local gem path
-gem 'mygem', path: '/home/igate/projects/angular2-rails5/mygem'
+#gem 'mygem', path: '/home/igate/projects/angular2-rails5/mygem'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
