@@ -19,4 +19,16 @@ namespace :master do
     end
     puts "************ End ***********************"
   end
+
+  desc "Increase login attempt count"
+  task login_attempt: :environment do
+    puts "------------ Start -----------"
+    50.times do
+      User.all.each do |user|
+        user.sign_in_count = user.sign_in_count + 1
+        user.save(validate: false)
+      end
+    end
+    puts "---------- End ---------------"
+  end
 end
