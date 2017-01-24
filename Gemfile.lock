@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/ramprabhu-idexcel/my-gem.git
-  revision: 87c10132ca33bc4f2700af3d2f96ed1cdaa930df
+  revision: 240e370526642850d7f5b85e945ff893d99b9fc0
   specs:
     mygem (0.0.1)
       rails (~> 5.0.1)
