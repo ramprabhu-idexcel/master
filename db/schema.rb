@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170124065413) do
+ActiveRecord::Schema.define(version: 20171121065207) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -39,6 +39,26 @@ ActiveRecord::Schema.define(version: 20170124065413) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["post_id"], name: "index_comments_on_post_id", using: :btree
+  end
+
+  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "gender"
+    t.date     "dob"
+    t.string   "place_of_birth"
+    t.string   "office_email",     default: "",   null: false
+    t.string   "personal_email",   default: "",   null: false
+    t.datetime "joining_date"
+    t.string   "designation"
+    t.string   "salary"
+    t.integer  "total_experience"
+    t.string   "citizenship"
+    t.boolean  "active",           default: true
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "manager_id"
+    t.index ["manager_id"], name: "index_employees_on_manager_id", using: :btree
   end
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

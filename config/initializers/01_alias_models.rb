@@ -8,6 +8,7 @@ Score = Mygem::Score
 Project = Mygem::Project
 Task = Mygem::Task
 Ip = Mygem::Ip
+Employee = Mygem::Employee
 [
   Restaurant,
   Review,
@@ -18,7 +19,8 @@ Ip = Mygem::Ip
   Score,
   Project,
   Task,
-  Ip
+  Ip,
+  Employee
 ].each do |klass|
   klass.instance_eval do
     def to_s
